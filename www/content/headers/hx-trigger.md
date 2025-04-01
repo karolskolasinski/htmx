@@ -1,5 +1,7 @@
 +++
 title = "HX-Trigger Response Headers"
+description = """\
+  Use the HX-Trigger family of response headers in htmx to trigger client-side actions from an htmx response."""
 +++
 
 These response headers can be used to trigger client side actions on the target element within a response to htmx.  You
@@ -60,7 +62,7 @@ document.body.addEventListener("showMessage", function(evt){
 
 Each property of the JSON object on the right hand side will be copied onto the details object for the event.
 
-### Targetting Other Elements
+### Targeting Other Elements
 
 You can trigger events on other target elements by adding a `target` argument to the JSON object.
 
@@ -78,3 +80,7 @@ You may also trigger multiple events with no additional details by sending event
 `HX-Trigger: event1, event2`
 
 Using events gives you a lot of flexibility to add functionality to normal htmx responses.
+
+## Notes
+
+Response headers are not processed on 3xx response codes. see [Response Headers](@/docs.md#response-headers)
